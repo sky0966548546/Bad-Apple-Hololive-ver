@@ -1,1 +1,1 @@
-# Bad-Apple-Hololive-ver
+# Bad Apple Hololive ver
