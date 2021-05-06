@@ -1,19 +1,12 @@
-import time
 import os
 from PIL import Image
-os.system("cls")
-os.system("title 準備開始囉")
-os.system("pause")
-for a in range(1, 1295):
-    time.sleep(0.08)
-    IMG = "C:/Users/User/Desktop/Bad Apple/demo/0 (%s).jpg" % (a)
-    WIDTH = 80
+for a in range(1, 6546):
+    IMG = "C:/Users/User/Desktop/Bad Apple/data/%s.jpg" % (a)
+    WIDTH = 127
     HEIGHT = 35
-    OUTPUT = "C:/Users/User/Desktop/Bad Apple/txt demo/%s.txt" % (a)
-    s = "title 第%s張" % (a)
+    OUTPUT = "C:/Users/User/Desktop/Bad Apple/txt/%s.txt"%(a)
     ascii_char = list(
-        "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~<>i!lI;:,\"^`'. ")
-
+        "$@B%8&WM#oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~<>i!lI;:,\"^`'. ")
     def get_char(r, g, b, alpha=256):
         if alpha == 0:
             return ' '
@@ -30,11 +23,12 @@ for a in range(1, 1295):
             for w in range(WIDTH):
                 txt += get_char(*im.getpixel((w, h)))
             txt += '\n'
-        print(txt)
-        os.system(s)
-        if OUTPUT:
-            with open(OUTPUT, 'w') as f:
-                f.write(txt)
-        else:
-            with open("output.txt", 'w') as f:
-                f.write(txt)
+
+    if OUTPUT:
+        with open(OUTPUT, 'w') as f:
+            print("輸出第",a,"張")
+            f.write(txt)
+    else:
+        with open("output.txt", 'w') as f:
+            print("輸出第",a,"張")
+            f.write(txt)
