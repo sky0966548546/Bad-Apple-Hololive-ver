@@ -1,12 +1,15 @@
 import os
 import time
-os.system('cls')
-os.system("title 準備開始囉")
+import linecache
 os.system('pause')
-for a in range(1, 1295):
-    c = "title 目前第%s張" % (a)
-    os.system(c)
-    time.sleep(0.1)
-    f = open("C:/Users/User/Desktop/Bad Apple/txt demo/%s.txt" % (a), 'r')
-    print(f.read())
-    f.close()
+time.sleep(0.1)
+a=0
+files="C:/Users/User/Desktop/Bad Apple/badapple.txt"
+for i in range(1,104699):
+    if i%60==0 or i%60==59 or i%60==58:
+        time.sleep(0.02)
+        continue
+    text = linecache.getline(files,i)
+    print(text)
+    a+=1
+f.close()
