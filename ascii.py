@@ -1,12 +1,11 @@
 import os
 from PIL import Image
-for a in range(1, 6546):
+for a in range(1, 2):
     IMG = "C:/Users/User/Desktop/Bad Apple/data/%s.jpg" % (a)
-    WIDTH = 127
-    HEIGHT = 35
+    WIDTH = 300
+    HEIGHT = 82
     OUTPUT = "C:/Users/User/Desktop/Bad Apple/txt/%s.txt"%(a)
-    ascii_char = list(
-        "$@B%8&WM#oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~<>i!lI;:,\"^`'. ")
+    ascii_char = list("⠀⠄⠆⠖⠶⡶⣩⣪⣫⣾⣿")
     def get_char(r, g, b, alpha=256):
         if alpha == 0:
             return ' '
